@@ -6,7 +6,7 @@ package ca.ualberta.cs.lonelytwitter;
 import java.util.Date;
 
 public abstract class Mood implements Tweetable {
-    private abstract Boolean mood;
+    private Boolean mood;
     private Date date;
 
     Mood(Boolean mood){
