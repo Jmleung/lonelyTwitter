@@ -69,6 +69,10 @@ public class LonelyTwitterActivity extends Activity {
 
 			public void onClick(View v) {
 				query = bodyText.getText().toString();
+				ElasticsearchTweetController.GetTweetsTask getTweetsTask = new ElasticsearchTweetController.GetTweetsTask();
+				getTweetsTask.execute(query);
+				tweetList = getTweetsTask.get();
+				adapter.notifyDataSetChanged();
 
 			}
 		});
